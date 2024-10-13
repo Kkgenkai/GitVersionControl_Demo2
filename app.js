@@ -1,4 +1,4 @@
-//calculate app: version 1.0.4
+//calculate app: version 1.0.5
 /* features:
  add
  sub
@@ -6,6 +6,7 @@
  div
  display
  random Numbers
+ string Reversal
 */
 //add feature
 function calc(op, num1, num2){
@@ -37,4 +38,14 @@ function randNum(){
     return randNum;
 }
 
+function stringReversal(string){
+    let revString = '';
+    for (let i = string.length - 1; i >= 0; i--) {
+        revString += string[i];
+    }
+
+    return revString;
+}
+
 calc('+', randNum().num1, randNum().num2);
+console.log(stringReversal("olleh rezyar rats"));
