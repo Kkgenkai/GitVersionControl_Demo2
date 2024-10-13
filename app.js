@@ -1,4 +1,4 @@
-//calculate app: version 1.0.5
+//calculate app: version 1.0.6
 /* features:
  add
  sub
@@ -9,33 +9,29 @@
  string Reversal
 */
 //add feature
-function calc(op, num1, num2){
-    switch(op){
-        case '+':
-            console.log("Add: " + (num1 + num2));
-            break;
-        case '-':
-            console.log("Sub: " + (num1 - num2));
-            break;
-        case '*':
-            console.log("Mul: " + (num1 * num2));
-            break;
-        case '/':
-            console.log("Div: " + (num1 / num2));
-            break;
-        default:
-            console.log("Use a real Calculator Bro!!!");
-            break;
-    }
-}
-
-function randNum(){
+function calc(op){
     const randNum = {
         num1: Math.floor(Math.random() * Math.random() * 10),
         num2: Math.floor(Math.random() * Math.random() * 10)
     }
 
-    return randNum;
+    switch(op){
+        case '+':
+            console.log("Add: " + (randNum.num1 + randNum.num2));
+            break;
+        case '-':
+            console.log("Sub: " + (randNum.num1 - randNum.num2));
+            break;
+        case '*':
+            console.log("Mul: " + (randNum.num1 * randNum.num2));
+            break;
+        case '/':
+            console.log("Div: " + (randNum.num1 / randNum.num2));
+            break;
+        default:
+            console.log("Use a real Calculator Bro!!!");
+            break;
+    }
 }
 
 function stringReversal(string){
@@ -47,9 +43,9 @@ function stringReversal(string){
     return revString;
 }
 
-calc('+', randNum().num1, randNum().num2);
-calc('*', randNum().num1, randNum().num2);
-calc('/', randNum().num1, randNum().num2);
-calc('-', randNum().num1, randNum().num2);
+calc('+');
+calc('*');
+calc('/');
+calc('-');
 
 console.log(stringReversal("olleh rezyar rats"));
