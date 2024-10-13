@@ -1,4 +1,4 @@
-//calculate app: version 1.0.2
+//calculate app: version 1.0.3
 /* features:
  add
  sub
@@ -7,27 +7,24 @@
  display
 */
 //add feature
-let add = (num1, num2)=>{
-    return num1 + num2;
+function calc(op, num1, num2){
+    switch(op){
+        case '+':
+            console.log("Add:" + (num1 + num2));
+            break;
+        case '-':
+            console.log("Sub:" + (num1 - num2));
+            break;
+        case '*':
+            console.log("Mul:" + (num1 * num2));
+            break;
+        case '/':
+            console.log("Div:" + (num1 / num2));
+            break;
+        default:
+            console.log("Use a real Calculator Bro!!!");
+            break;
+    }
 }
 
-let sub = (num1, num2)=>{
-    return num1 - num2;
-}
-
-let mul = (num1, num2)=>{
-    return num1 * num2;
-}
-
-let div = (num1, num2)=>{
-    return num1 / num2;
-}
-
-let disp = ()=>{
-    console.log("Add: " + add(2,3));
-    console.log("sub: " + sub(2,3));
-    console.log("Mul: " + mul(2,3));
-    console.log("Div: " + div(2,3));
-}
-
-disp();
+calc('+', 2, 3);
