@@ -6,6 +6,9 @@
  div
  display
  random Numbers
+
+ updates:
+ * added some testing log codes
 */
 //add feature
 function calc(op, num1, num2){
@@ -38,3 +41,6 @@ function randNum(){
 }
 
 calc('+', randNum().num1, randNum().num2);
+calc('*', randNum().num1, randNum().num2);
+calc('/', randNum().num1, randNum().num2);
+calc('-', randNum().num1, randNum().num2);
